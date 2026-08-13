@@ -5,7 +5,7 @@
 小学生以下の方ならどなたでも参加できる、和ごま「さいふごま」の大会です。
 参加無料・当日受付・こまの貸し出しありです。
 
-👉 **大会の案内ページ**：GitHub Pages を有効にすると `https://<ユーザー名>.github.io/saifugoma-taikai/` で公開されます（有効化後にこの行をそのURLに書き換えてください）。
+👉 **[大会の案内ページはこちら](https://support-creators.github.io/saifugoma-taikai/)**
 
 ---
 
