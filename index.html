@@ -3,212 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>第23回 九州国立博物館杯 さいふごま大会（特別展 氷河期展記念）</title>
-<meta name="description" content="2026年8月30日(日) 九州国立博物館ミュージアムホールで開催。小学生以下対象、参加無料・当日受付・コマの貸し出しあり。">
+<title>第23回 九州国立博物館杯 さいふごま大会｜特別展「氷河期展」記念</title>
+<meta name="description" content="2026年8月30日(日) 九州国立博物館ミュージアムホール。小学生以下対象、参加無料・当日受付・コマの貸し出しあり。今年のこまは氷河期展デザイン。">
+<meta property="og:title" content="第23回 九州国立博物館杯 さいふごま大会">
+<meta property="og:description" content="2026年8月30日(日) 九州国立博物館ミュージアムホール。参加無料・当日受付。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#2b2118;
-    --ink-soft:#5c4b3a;
-    --paper:#fdfaf4;
-    --card:#ffffff;
-    --accent:#b4472e;
-    --accent-2:#1f6f78;
-    --line:#e6dccc;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.8;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap{max-width:820px;margin:0 auto;padding:0 20px 64px;}
+:root{
+  --ice-900:#06131f;
+  --ice-800:#0b2033;
+  --ice-700:#123047;
+  --ice-500:#1f6f83;
+  --ice-300:#7fd4e8;
+  --ice-100:#d8f1f8;
+  --ember:#ff7a45;
+  --ember-soft:#ffb27a;
+  --gold:#f5c14e;
+  --paper:#f7f4ee;
+  --ink:#1d2733;
+  --ink-soft:#5b6b7c;
+  --line:rgba(18,48,71,.14);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px;}
 
-  header.hero{
-    background:linear-gradient(160deg,#1f6f78 0%,#164e58 60%,#123c46 100%);
-    color:#fff;
-    padding:48px 20px 40px;
-    text-align:center;
-  }
-  .hero .tag{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.6);
-    border-radius:999px;
-    padding:4px 16px;
-    font-size:.82rem;
-    letter-spacing:.08em;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    margin:0 0 6px;
-    font-size:clamp(1.5rem,5.4vw,2.4rem);
-    line-height:1.4;
-    letter-spacing:.02em;
-  }
-  .hero .sub{margin:0;opacity:.9;font-size:clamp(.9rem,3.4vw,1.05rem);}
-  .hero .date{
-    margin-top:26px;
-    font-size:clamp(1.15rem,4.6vw,1.6rem);
-    font-weight:700;
-  }
-  .hero .place{margin-top:4px;font-size:.95rem;opacity:.92;}
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(1000px 520px at 15% -10%, rgba(127,212,232,.38), transparent 60%),
+    radial-gradient(760px 420px at 92% 8%, rgba(255,122,69,.24), transparent 62%),
+    linear-gradient(168deg,#0d2c42 0%,#0a1e2f 46%,#061320 100%);
+  padding:64px 22px 0;
+  text-align:center;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    linear-gradient(115deg,rgba(255,255,255,.05) 0 22%,transparent 22% 30%,rgba(255,255,255,.035) 30% 46%,transparent 46%),
+    linear-gradient(255deg,rgba(255,255,255,.045) 0 18%,transparent 18% 34%,rgba(255,255,255,.03) 34% 52%,transparent 52%);
+  opacity:.9;
+  pointer-events:none;
+}
+.hero > *{position:relative;z-index:1;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(216,241,248,.4);
+  background:rgba(216,241,248,.09);
+  border-radius:999px;
+  padding:7px 20px;
+  font-size:.8rem;letter-spacing:.13em;font-weight:700;
+  color:var(--ice-100);
+  backdrop-filter:blur(6px);
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--ice-300);}
+.kicker{
+  margin:26px 0 6px;
+  font-size:clamp(.95rem,3.4vw,1.2rem);
+  letter-spacing:.18em;
+  font-weight:700;
+  color:var(--ice-300);
+}
+h1.title{
+  margin:0;
+  font-size:clamp(2.6rem,11vw,5.4rem);
+  font-weight:900;
+  letter-spacing:.02em;
+  line-height:1.06;
+  text-shadow:0 6px 40px rgba(0,0,0,.45);
+}
+h1.title .accent{
+  background:linear-gradient(180deg,#fff 30%,var(--ice-300) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.when{
+  margin:30px auto 0;
+  display:inline-flex;flex-direction:column;gap:2px;
+  padding:18px 34px;
+  border-radius:16px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(8px);
+}
+.when .date{
+  font-size:clamp(1.5rem,6.4vw,2.5rem);
+  font-weight:900;letter-spacing:.01em;line-height:1.25;
+}
+.when .date .day{color:var(--ember-soft);}
+.when .place{font-size:.95rem;color:var(--ice-100);opacity:.9;}
+.chips{margin:24px auto 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:620px;}
+.chip{
+  font-size:.86rem;font-weight:700;
+  padding:7px 15px;border-radius:9px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+}
+.chip.hot{background:rgba(255,122,69,.22);border-color:rgba(255,178,122,.5);color:#ffd9c4;}
 
-  .badges{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
-  .badge{
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.35);
-    border-radius:8px;
-    padding:6px 14px;
-    font-size:.88rem;
-  }
+/* spinning koma row */
+.komas{
+  margin:44px auto -70px;
+  display:flex;justify-content:center;align-items:flex-end;
+  gap:clamp(-10px,2vw,18px);
+  max-width:760px;
+  padding-bottom:0;
+}
+.koma{
+  width:clamp(84px,20vw,168px);
+  aspect-ratio:1;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:0 16px 40px rgba(0,0,0,.42);
+  background:#fff;
+  flex:0 0 auto;
+}
+.koma img{width:100%;height:100%;object-fit:cover;display:block;}
+.koma.spin{animation:bob 4.4s ease-in-out infinite;}
+.koma:nth-child(2).spin{animation-delay:.5s;animation-duration:3.8s;}
+.koma:nth-child(3).spin{animation-delay:1s;animation-duration:5s;}
+.koma:nth-child(4).spin{animation-delay:1.5s;animation-duration:4.1s;}
+@keyframes bob{
+  0%,100%{transform:translateY(0) rotate(-5deg);}
+  50%{transform:translateY(-16px) rotate(5deg);}
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){.koma.spin{animation:none;}}
 
-  section{margin-top:44px;}
-  h2{
-    font-size:1.18rem;
-    margin:0 0 16px;
-    padding-left:12px;
-    border-left:5px solid var(--accent);
-    line-height:1.5;
-  }
-  h3{font-size:1rem;margin:22px 0 8px;color:var(--accent-2);}
+.hero-foot{height:90px;}
 
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:20px 22px;
-  }
-  .card + .card{margin-top:14px;}
+/* ---------- SECTIONS ---------- */
+section{padding:64px 0 0;}
+.sec-head{margin-bottom:22px;}
+.sec-num{
+  font-size:.74rem;letter-spacing:.24em;font-weight:900;
+  color:var(--ice-500);
+}
+h2{
+  margin:4px 0 0;
+  font-size:clamp(1.35rem,4.6vw,1.8rem);
+  font-weight:900;letter-spacing:.01em;line-height:1.4;
+}
+h2 .bar{display:block;width:52px;height:5px;border-radius:3px;margin-top:12px;
+  background:linear-gradient(90deg,var(--ember),var(--gold));}
+h3{font-size:1.02rem;margin:26px 0 6px;color:var(--ice-500);font-weight:700;}
 
-  table{width:100%;border-collapse:collapse;font-size:.95rem;}
-  th,td{border-bottom:1px solid var(--line);padding:11px 6px;text-align:left;vertical-align:top;}
-  th{width:7.5em;color:var(--ink-soft);font-weight:600;white-space:nowrap;}
-  tr:last-child th,tr:last-child td{border-bottom:none;}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px 28px;
+  box-shadow:0 2px 14px rgba(18,48,71,.05);
+}
+.card + .card{margin-top:14px;}
 
-  .time{
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
-    padding:16px 0;
-    border-bottom:1px dashed var(--line);
-  }
-  .time:last-child{border-bottom:none;}
-  .time .clock{
-    font-weight:700;
-    color:var(--accent);
-    white-space:nowrap;
-    min-width:6.5em;
-    font-size:1rem;
-  }
-  .time .body strong{display:block;font-size:1.02rem;margin-bottom:2px;}
-  .time .body span{font-size:.9rem;color:var(--ink-soft);}
+/* koma gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:16px;
+  margin-top:6px;
+}
+.g-item{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:16px 12px 18px;text-align:center;
+  box-shadow:0 2px 14px rgba(18,48,71,.05);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.g-item:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(18,48,71,.14);}
+.g-item img{
+  width:100%;max-width:150px;aspect-ratio:1;border-radius:50%;
+  object-fit:cover;display:block;margin:0 auto 12px;
+  border:3px solid #eef6f9;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.g-item:hover img{transform:rotate(360deg);}
+.g-item .nm{font-weight:900;font-size:1rem;}
+.g-item .sub{font-size:.8rem;color:var(--ink-soft);}
 
-  ol,ul{padding-left:1.3em;margin:8px 0;}
-  li{margin-bottom:6px;}
+/* timeline */
+.tl{position:relative;padding-left:26px;}
+.tl::before{content:"";position:absolute;left:6px;top:10px;bottom:16px;width:3px;
+  background:linear-gradient(180deg,var(--ice-300),var(--ember-soft));border-radius:2px;}
+.tl-item{position:relative;padding:0 0 26px;}
+.tl-item:last-child{padding-bottom:2px;}
+.tl-item::before{
+  content:"";position:absolute;left:-26px;top:9px;width:15px;height:15px;border-radius:50%;
+  background:#fff;border:4px solid var(--ice-500);
+}
+.tl-item.later::before{border-color:var(--ember);}
+.tl-time{font-weight:900;color:var(--ember);font-size:1.05rem;letter-spacing:.02em;}
+.tl-title{font-weight:900;font-size:1.12rem;margin-top:2px;}
+.tl-body{font-size:.94rem;color:var(--ink-soft);}
+.tag{
+  display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.06em;
+  padding:3px 10px;border-radius:6px;margin-left:8px;vertical-align:middle;
+  background:#fff1e6;color:#b4471f;border:1px solid #ffd3b6;
+}
 
-  .note{
-    background:#fff6ec;
-    border:1px solid #f0dcc4;
-    border-radius:10px;
-    padding:14px 18px;
-    font-size:.9rem;
-    color:var(--ink-soft);
-  }
+table{width:100%;border-collapse:collapse;font-size:.95rem;}
+th,td{border-bottom:1px solid var(--line);padding:13px 4px;text-align:left;vertical-align:top;}
+th{width:7.5em;color:var(--ink-soft);font-weight:700;white-space:nowrap;}
+tr:last-child th,tr:last-child td{border-bottom:none;}
 
-  details{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:0;
-    overflow:hidden;
-  }
-  summary{
-    cursor:pointer;
-    padding:16px 20px;
-    font-weight:700;
-    background:#f6f1e7;
-    list-style:none;
-  }
-  summary::-webkit-details-marker{display:none;}
-  summary::before{content:"▶ ";color:var(--accent);font-size:.8em;}
-  details[open] summary::before{content:"▼ ";}
-  .details-body{padding:6px 22px 20px;}
+ul,ol{padding-left:1.35em;margin:8px 0;}
+li{margin-bottom:7px;}
 
-  footer{
-    margin-top:56px;
-    padding-top:24px;
-    border-top:1px solid var(--line);
-    font-size:.86rem;
-    color:var(--ink-soft);
-    text-align:center;
-  }
-  a{color:var(--accent-2);}
+.note{
+  background:#eef7fa;border:1px solid #cfe7ef;border-radius:12px;
+  padding:14px 18px;font-size:.88rem;color:#3b5a68;
+}
+
+details{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;}
+summary{cursor:pointer;padding:18px 24px;font-weight:900;background:#f1f5f7;list-style:none;}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:"＋　";color:var(--ember);font-weight:900;}
+details[open] summary::before{content:"−　";}
+.details-body{padding:8px 26px 24px;}
+
+/* ---------- POSTER BAND ---------- */
+.poster-band{
+  background:
+    radial-gradient(700px 380px at 50% 0%, rgba(255,122,69,.16), transparent 65%),
+    linear-gradient(180deg,#061320 0%,#0a1e2f 55%,#0d2c42 100%);
+  padding:56px 0 68px;
+}
+.poster-head{margin-bottom:24px;}
+.sec-num.light{color:var(--ice-300);}
+h2.light{color:#fff;}
+.poster-frame{
+  margin:0 auto;
+  max-width:520px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.14);
+  transform:rotate(-1.1deg);
+  transition:transform .35s ease;
+  background:#fff;
+}
+.poster-frame:hover{transform:rotate(0deg) scale(1.015);}
+.poster-frame img{width:100%;display:block;}
+.poster-note{
+  margin:22px auto 0;max-width:520px;text-align:center;
+  color:var(--ice-100);opacity:.85;font-size:.86rem;
+}
+.poster-note .dl{
+  display:inline-block;margin-left:10px;color:#fff;font-weight:700;
+  border-bottom:1px solid rgba(255,255,255,.5);text-decoration:none;
+}
+.poster-note .dl:hover{border-color:#fff;}
+
+.cta{
+  margin-top:70px;
+  background:linear-gradient(150deg,#0d2c42,#061320);
+  color:#fff;border-radius:22px;padding:38px 30px;text-align:center;
+}
+.cta .big{font-size:clamp(1.2rem,4.6vw,1.7rem);font-weight:900;line-height:1.5;}
+.cta .small{margin-top:10px;font-size:.92rem;color:var(--ice-100);opacity:.88;}
+
+footer{
+  margin-top:60px;padding:34px 0 46px;
+  border-top:1px solid var(--line);
+  font-size:.85rem;color:var(--ink-soft);text-align:center;
+}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="tag">特別展「氷河期展」記念</div>
-  <h1>第23回 九州国立博物館杯<br>さいふごま大会</h1>
-  <p class="sub">主催：九州国立博物館　／　共催：福岡県和ごま競技普及協会</p>
-  <div class="date">2026年8月30日（日）</div>
-  <div class="place">九州国立博物館 ミュージアムホール</div>
-  <div class="badges">
-    <span class="badge">小学生以下</span>
-    <span class="badge">参加無料</span>
-    <span class="badge">当日受付・申込可</span>
-    <span class="badge">コマの貸し出しあり</span>
+  <div class="eyebrow"><span class="dot"></span>特別展「氷河期展」記念</div>
+  <div class="kicker">第23回　九州国立博物館杯</div>
+  <h1 class="title"><span class="accent">さいふごま大会</span></h1>
+
+  <div class="when">
+    <div class="date">2026年8月30日<span class="day">（日）</span></div>
+    <div class="place">九州国立博物館　ミュージアムホール</div>
   </div>
+
+  <div class="chips">
+    <span class="chip hot">参加無料</span>
+    <span class="chip">小学生以下</span>
+    <span class="chip">当日受付・申込OK</span>
+    <span class="chip">こまの貸し出しあり</span>
+    <span class="chip">手ぶらでどうぞ</span>
+  </div>
+
+  <div class="komas">
+    <div class="koma spin"><img src="mammoth.jpg" alt="マンモスくんのさいふごま"></div>
+    <div class="koma spin"><img src="saber.jpg" alt="サーベルタイガーくんのさいふごま"></div>
+    <div class="koma spin"><img src="deer.jpg" alt="オオツノジカくんのさいふごま"></div>
+    <div class="koma spin"><img src="bison.jpg" alt="バイソンくんのさいふごま"></div>
+  </div>
+  <div class="hero-foot"></div>
 </header>
+
+<div class="poster-band">
+  <div class="wrap">
+    <div class="poster-head">
+      <div class="sec-num light">Ｐ Ｏ Ｓ Ｔ Ｅ Ｒ</div>
+      <h2 class="light">大会ポスター<span class="bar"></span></h2>
+    </div>
+    <figure class="poster-frame">
+      <a href="poster.jpg" target="_blank" rel="noopener"><img src="poster.jpg" alt="第23回 さいふごま大会 ポスター"></a>
+    </figure>
+    <p class="poster-note">印刷して掲示・配布にお使いいただけます。<a class="dl" href="poster.jpg" target="_blank" rel="noopener">画像を開く</a></p>
+  </div>
+</div>
 
 <div class="wrap">
 
-  <section>
-    <h2>当日のながれ</h2>
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="sec-num">Ｄ Ｅ Ｓ Ｉ Ｇ Ｎ</div>
+      <h2>今年のこまは、氷河期展デザイン<span class="bar"></span></h2>
+    </div>
+    <p style="margin:0 0 18px;color:var(--ink-soft);font-size:.96rem;">
+      直径3.5cmの木でできた小さなこま「さいふごま」。今年は特別展「氷河期展」にあわせて、氷河期の仲間たちが描かれたこまが登場します。
+    </p>
+    <div class="gallery">
+      <div class="g-item"><img src="mammoth.jpg" alt="マンモスくん"><div class="nm">マンモスくん</div><div class="sub">どっしり最強</div></div>
+      <div class="g-item"><img src="saber.jpg" alt="サーベルタイガーくん"><div class="nm">サーベルタイガーくん</div><div class="sub">するどい牙</div></div>
+      <div class="g-item"><img src="deer.jpg" alt="オオツノジカくん"><div class="nm">オオツノジカくん</div><div class="sub">立派な角</div></div>
+      <div class="g-item"><img src="bison.jpg" alt="バイソンくん"><div class="nm">バイソンくん</div><div class="sub">力持ち</div></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="sec-num">Ｓ Ｃ Ｈ Ｅ Ｄ Ｕ Ｌ Ｅ</div>
+      <h2>当日のながれ<span class="bar"></span></h2>
+    </div>
     <div class="card">
-      <div class="time">
-        <div class="clock">13:00〜14:00</div>
-        <div class="body">
-          <strong>体験会「さいふごまを回してみよう」</strong>
-          <span>ちびっこ指導員（小学生）が、こまの回し方を教えます。はじめての方もどうぞ。</span>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-time">13:00 — 14:00</div>
+          <div class="tl-title">体験会「さいふごまを回してみよう」</div>
+          <div class="tl-body">ちびっこ指導員（小学生）が、こまの回し方を教えます。はじめての方も、ここで練習してから大会に出られます。</div>
         </div>
-      </div>
-      <div class="time">
-        <div class="clock">14:00〜</div>
-        <div class="body">
-          <strong>さいふごま大会</strong>
-          <span>予選のあと、勝ち残った16名で決勝トーナメントを行います。</span>
+        <div class="tl-item">
+          <div class="tl-time">14:00 —</div>
+          <div class="tl-title">さいふごま大会（小学生以下）</div>
+          <div class="tl-body">全員での予選のあと、勝ち残った16名で決勝トーナメント。優勝者にはトロフィーと賞状を贈ります。</div>
+        </div>
+        <div class="tl-item later">
+          <div class="tl-time">子どもの大会 終了後<span class="tag">時間があれば</span></div>
+          <div class="tl-title">大人のさいふごま大会</div>
+          <div class="tl-body">子どもの大会が終わったあと、時間に余裕があれば大人の部も行います。お父さん・お母さん、付き添いの方もぜひ挑戦してみてください。</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>開催概要</h2>
-    <div class="card">
-      <table>
-        <tr><th>大会名</th><td>第23回 九州国立博物館杯 さいふごま大会（特別展「氷河期展」記念）</td></tr>
-        <tr><th>日時</th><td>2026年8月30日（日）13:00〜（体験会）／14:00〜（大会）</td></tr>
-        <tr><th>場所</th><td>九州国立博物館 ミュージアムホール</td></tr>
-        <tr><th>参加資格</th><td>小学生以下（小学生・幼児）</td></tr>
-        <tr><th>参加費</th><td>無料</td></tr>
-        <tr><th>申込</th><td>当日受付・当日申込可</td></tr>
-        <tr><th>使用コマ</th><td>直径3.5cmの木製「さいふごま」（室内用・回し方は普通のこまと同じ）。競技用のこまは貸し出します。</td></tr>
-        <tr><th>主催</th><td>九州国立博物館</td></tr>
-        <tr><th>共催</th><td>福岡県和ごま競技普及協会（太宰府市）</td></tr>
-      </table>
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="sec-num">Ｒ Ｕ Ｌ Ｅ</div>
+      <h2>競技のしかた<span class="bar"></span></h2>
     </div>
-  </section>
-
-  <section>
-    <h2>競技内容</h2>
     <div class="card">
       <h3>予選</h3>
-      <p>参加者全員でさいふごまを回し、長く回っていた上位16名が決勝に進みます。</p>
+      <p style="margin:0;">参加者全員でさいふごまを回し、長く回っていた上位16名が決勝に進みます。</p>
       <h3>決勝トーナメント「けんかごま」（3回戦）</h3>
-      <ul>
+      <ul style="margin-bottom:0;">
         <li>皿を土俵にして、一方が先に投げ、もう一方が後から投げます。</li>
         <li>最後まで回っていた方が勝ちです。</li>
         <li>次の対戦では投げる順番を入れかえます。1対1になった場合は同時に投げます。</li>
@@ -217,8 +392,11 @@
     </div>
   </section>
 
-  <section>
-    <h2>表彰・賞品</h2>
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="sec-num">Ｐ Ｒ Ｉ Ｚ Ｅ</div>
+      <h2>表彰・賞品<span class="bar"></span></h2>
+    </div>
     <div class="card">
       <table>
         <tr><th>優勝</th><td>賞状・トロフィー（九州国立博物館）、盾（協会）、副賞（九州国立博物館）、こま（協会）</td></tr>
@@ -232,45 +410,33 @@
     </div>
   </section>
 
-  <section>
-    <h2>関係者向け・運営要領</h2>
-    <details>
-      <summary>準備物・当日の運営メモ（関係者向け）</summary>
-      <div class="details-body">
-        <h3>会場に用意していただくもの</h3>
-        <ul>
-          <li>練習用の台</li>
-          <li>トーナメント表を掲示する白板</li>
-          <li>けんかごまの土俵となる皿を載せる丸椅子 ×2</li>
-          <li>ボランティアが座る椅子 3脚</li>
-          <li>貸し出し用の「さいふごま」等を載せる長机 ×3</li>
-        </ul>
-        <h3>協会持参</h3>
-        <ul>
-          <li>貸し出し用のこま</li>
-          <li>土俵となる皿</li>
-          <li>トーナメント表</li>
-        </ul>
-        <h3>その他</h3>
-        <ul>
-          <li>会場の配置は別紙の配置図によります。</li>
-          <li>指導員5名と関係者5名（計10名）が後日「特別展」を見学できるよう、入場券の手配をお願いしています。</li>
-          <li>当日8月30日は、業務用駐車場への車の乗り入れ（12:30頃、協会車両2台）と、参加する子どもたちを運ぶ車5台分の一般駐車場の駐車券をお願いしています。</li>
-        </ul>
-        <p class="note" style="margin-top:18px;">※車両ナンバー・担当者の連絡先など、個人に関わる情報はこの公開ページには掲載していません。詳細は協会内で共有している資料をご確認ください。</p>
-      </div>
-    </details>
-  </section>
-
-  <section>
-    <h2>お問い合わせ</h2>
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="sec-num">Ｉ Ｎ Ｆ Ｏ</div>
+      <h2>開催概要<span class="bar"></span></h2>
+    </div>
     <div class="card">
       <table>
-        <tr><th>九州国立博物館</th><td>050-5542-8600（ハローダイヤル）</td></tr>
-        <tr><th>広報について</th><td>九州国立博物館 広報課　TEL 092-929-3271</td></tr>
+        <tr><th>大会名</th><td>第23回 九州国立博物館杯 さいふごま大会（特別展「氷河期展」記念）</td></tr>
+        <tr><th>日時</th><td>2026年8月30日（日）13:00〜 体験会／14:00〜 大会</td></tr>
+        <tr><th>場所</th><td>九州国立博物館 ミュージアムホール</td></tr>
+        <tr><th>参加資格</th><td>小学生以下（小学生・幼児）　※子どもの大会終了後、時間があれば大人の部も実施</td></tr>
+        <tr><th>参加費</th><td>無料</td></tr>
+        <tr><th>申込</th><td>当日受付・当日申込可</td></tr>
+        <tr><th>使用コマ</th><td>直径3.5cmの木製「さいふごま」（室内用・回し方は普通のこまと同じ）。競技用のこまは貸し出します。</td></tr>
+        <tr><th>主催</th><td>九州国立博物館</td></tr>
+        <tr><th>共催</th><td>福岡県和ごま競技普及協会（太宰府市）</td></tr>
       </table>
     </div>
   </section>
+
+  <div class="cta reveal">
+    <div class="big">申し込みはいりません。<br>当日、会場にお越しください。</div>
+    <div class="small">
+      お問い合わせ：九州国立博物館 050-5542-8600（ハローダイヤル）<br>
+      広報について：九州国立博物館 広報課 TEL 092-929-3271
+    </div>
+  </div>
 
   <footer>
     第23回 九州国立博物館杯 さいふごま大会（特別展「氷河期展」記念）<br>
@@ -278,5 +444,12 @@
   </footer>
 
 </div>
+
+<script>
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
